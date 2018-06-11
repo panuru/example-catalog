@@ -1,0 +1,18 @@
+.Loader {
+  $medium: 2em;
+  $large: 4em;
+
+  height: $medium;
+  margin: 1.2em auto;
+  width: $medium;
+
+  &--large {
+    height: $large;
+    width: $large;
+  }
+
+  > img {
+    height: 100%;
+    width: 100%;
+  }
+}

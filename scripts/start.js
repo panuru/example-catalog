@@ -42,7 +42,8 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 
 // Tools like Cloud9 rely on this.
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
-const DEFAULT_API_PORT = 3001;
+const API_PORT = 3001;
+const API_LATENCY = 600;
 const HOST = process.env.HOST || '0.0.0.0';
 
 if (process.env.HOST) {
@@ -59,6 +60,22 @@ if (process.env.HOST) {
   console.log(`Learn more here: ${chalk.yellow('http://bit.ly/2mwWSwH')}`);
   console.log();
 }
+
+// Run fake json api server
+
+const server = jsonServer.create();
+const router = jsonServer.router('data/db.json');
+const middlewares = jsonServer.defaults();
+
+// Simulate network latency
+server.use('/*', (req, res, next) => { setTimeout(next, API_LATENCY); });
+
+server.use(middlewares);
+server.use(router);
+
+server.listen(API_PORT, () => {
+  console.log(chalk.blue('JSON Server is running'));
+});
 
 // We attempt to use the default port but if it is busy, we offer the user to
 // run on a different port. `choosePort()` Promise resolves to the next free port.
@@ -107,15 +124,3 @@ choosePort(HOST, DEFAULT_PORT)
     }
     process.exit(1);
   });
-
-// Run fake json api server
-
-const server = jsonServer.create();
-const router = jsonServer.router('data/db.json');
-const middlewares = jsonServer.defaults();
-
-server.use(middlewares);
-server.use(router);
-server.listen(DEFAULT_API_PORT, () => {
-  console.log(chalk.blue('JSON Server is running'));
-});

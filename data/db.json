@@ -1,15 +1,64 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Amortentia",
-      "slug": "amortentia",
-      "brand": "Weasley's Wizard Wheezes",
+      "id": "5b1eeedb525fcd3bf13799ea",
+      "name": "Exercitation Excepteur",
+      "slug": "exercitation-excepteur",
+      "brand": "Quordate",
+      "type": "Eau de Toilette",
+      "image": "https://picsum.photos/200",
+      "price": 6085,
+      "rating": 0
+    },
+    {
+      "id": "5b1eeedba05ff8c59c3d5d60",
+      "name": "Laboris Et",
+      "slug": "laboris-et",
+      "brand": "Virva",
+      "type": "Eau de Toilette",
+      "image": "https://picsum.photos/200",
+      "price": 9691,
+      "rating": 0
+    },
+    {
+      "id": "5b1eeedb7cb37a99826122ed",
+      "name": "Est Et",
+      "slug": "est-et",
+      "brand": "Rodeology",
+      "type": "Eau de Toilette",
+      "image": "https://picsum.photos/200",
+      "price": 6913,
+      "rating": 2
+    },
+    {
+      "id": "5b1eeedb9bdda06bcdd7ea93",
+      "name": "Qui Labore",
+      "slug": "qui-labore",
+      "brand": "Slambda",
       "type": "Eau de Parfum",
-      "image": "",
-      "price": 100,
-      "size": "30 ml",
+      "image": "https://picsum.photos/200",
+      "price": 2589,
+      "rating": 2
+    },
+    {
+      "id": "5b1eeedb8083c0127727bb6f",
+      "name": "Ad Est",
+      "slug": "ad-est",
+      "brand": "Viagrand",
+      "type": "Eau de Toilette",
+      "image": "https://picsum.photos/200",
+      "price": 6198,
       "rating": 5
+    },
+    {
+      "id": "5b1eeedb5e03d4124d90af40",
+      "name": "Duis Nulla",
+      "slug": "duis-nulla",
+      "brand": "Yurture",
+      "type": "Eau de Parfum",
+      "image": "https://picsum.photos/200",
+      "price": 1056,
+      "rating": 7
     }
   ]
 }

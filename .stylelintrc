@@ -4,6 +4,6 @@
   ],
   "extends": "stylelint-config-sass-guidelines",
   "rules": {
-    "selector-class-pattern": "^(?:u|is|has)-[a-zA-Z][a-zA-Z0-9]*$|^(?!u|is|has)[a-zA-Z][a-zA-Z0-9]*(?:-[a-z][a-zA-Z0-9]*)?(?:--[a-z][a-zA-Z0-9]*)?$"
+    "selector-class-pattern": "^(?:u|is|has)-[a-zA-Z][a-zA-Z0-9]*$|^(?!u|is|has)[a-zA-Z][a-zA-Z0-9]*(?:-[a-z][a-zA-Z0-9]*)?(?:__[a-z][a-zA-Z0-9]*)?(?:--[a-z][a-zA-Z0-9]*)?$"
   }
 }

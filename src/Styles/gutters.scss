@@ -1,0 +1,14 @@
+@import './responsive';
+
+$gutter-sm: 4vw;
+$gutter-xl: 2em;
+
+@mixin gutters ($multiplier: 1) {
+  padding-left: $gutter-sm * $multiplier;
+  padding-right: $gutter-sm * $multiplier;
+
+  @include screen-lg {
+    padding-left: $gutter-xl * $multiplier;
+    padding-right: $gutter-xl * $multiplier;
+  }
+}

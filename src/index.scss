@@ -1,5 +1,38 @@
+@import '~normalize.css';
+@import './Styles/boilerplate';
+@import './Styles/colors';
+@import './Styles/variables';
+@import './Styles/typography';
+@import './Styles/responsive';
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
-  font-family: sans-serif;
+  background: $bg-light;
+  color: $text-dark;
+  font-family: $font-regular;
+  font-size: $font-size-base * 1.2;
+  height: 100%;
+  line-height: $line-height-base * 1.2;
   margin: 0;
+  min-width: $screen-min;
   padding: 0;
+
+  @include screen-lg {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+}
+
+.app-root {
+  height: 100%;
 }
