@@ -1,0 +1,15 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Amortentia",
+      "slug": "amortentia",
+      "brand": "Weasley's Wizard Wheezes",
+      "type": "Eau de Parfum",
+      "image": "",
+      "price": 100,
+      "size": "30 ml",
+      "rating": 5
+    }
+  ]
+}

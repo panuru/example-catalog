@@ -18,8 +18,13 @@
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
+.App-loader {
+  &::before {
+    content: 'Loading ...';
+  }
+}
+.App-error {
+  color: #c00;
 }
 
 @keyframes App-logo-spin {
