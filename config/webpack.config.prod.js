@@ -213,6 +213,11 @@ module.exports = {
             ),
             // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
           },
+          // Load inline svgs to enable styling
+          {
+            test: /\.svg$/,
+            loader: require.resolve('svg-inline-loader')
+          },
           // "file" loader makes sure assets end up in the `build` folder.
           // When you `import` an asset, you get its filename.
           // This loader doesn't use a "test" so it will catch all modules

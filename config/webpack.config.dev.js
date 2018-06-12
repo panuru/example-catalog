@@ -190,6 +190,11 @@ module.exports = {
               },
             ],
           },
+          // Load inline svgs to enable styling
+          {
+            test: /\.svg$/,
+            loader: require.resolve('svg-inline-loader')
+          },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
           // In production, they would get copied to the `build` folder.

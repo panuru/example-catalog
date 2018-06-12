@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SVG from 'svg-inline-react';
 import './App.scss';
 import ProductsProvider, { RequestState } from './Providers/ProductsProvider';
 import Products from './Views/Products';
@@ -12,9 +13,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
+          <SVG src={logo} className="icon App-logo"/>
           <h1 className="App-title">Demo shop</h1>
-          <img src={cart} className="App-cart" alt="cart" />
+          <SVG src={cart} className="icon App-cart"/>
         </header>
         <main role="main" className="App-main">
           <ProductsProvider>
@@ -26,7 +27,7 @@ class App extends Component {
           </ProductsProvider>
         </main>
         <footer className="App-footer">
-          <div>Icons made by <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank" rel="noopener noreferrer">CC 3.0 BY</a></div>
+          <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank" rel="noopener noreferrer">CC 3.0 BY</a></div>
         </footer>
       </div>
     );

@@ -1,0 +1,26 @@
+@import '../../Styles/colors';
+
+.ErrorDetails {
+  color: $caution;
+  text-align: center;
+
+}
+
+.ErrorDetails-message {
+  border: solid 1px $caution;
+  border-radius: 3px;
+  box-shadow: 0 0 3px $caution;
+  display: inline-block;
+  margin-top: 2.6em;
+  min-width: 30%;
+}
+
+.ErrorDetails-icon {
+  display: block;
+  height: 4em;
+  margin: 1em auto 2em;
+}
+
+.ErrorDetails-text {
+  margin: 1em auto 2em;
+}

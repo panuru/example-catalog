@@ -5,7 +5,7 @@ export const RequestState = {
   Pending: 'Pending',
   Success: 'Success',
   Error: 'Error'
-}
+};
 
 const apiUrl = (path) => `http://localhost:3001/${path}`;
 
