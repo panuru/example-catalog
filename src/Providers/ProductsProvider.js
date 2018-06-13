@@ -7,7 +7,7 @@ export const RequestState = {
   Error: 'Error'
 };
 
-const apiUrl = (path) => `http://localhost:3001/${path}`;
+const apiUrl = (path) => `${process.env.REACT_APP_API_URL}/${path}`;
 
 class ProductsProvider extends Component {
   constructor(props) {
