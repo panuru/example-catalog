@@ -3,7 +3,8 @@ module.exports = {
     "src/**/*.{js,jsx,mjs}"
   ],
   "setupFiles": [
-    "<rootDir>/config/polyfills.js"
+    "<rootDir>/config/polyfills.js",
+    "<rootDir>/config/jest/setup.js"
   ],
   "testMatch": [
     "<rootDir>/**/__tests__/**/*.{js,jsx,mjs}"

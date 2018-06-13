@@ -10,7 +10,6 @@ module.exports = {
     let data;
     const {pathname} = url.parse(urlString, false, true);
     const path = pathname && pathname.replace(/^\/|\/$/g, '');
-    console.log(path);
 
     if (path === 'products') {
       data = db.products;
