@@ -8,7 +8,8 @@
       "type": "Eau de Toilette",
       "image": "https://picsum.photos/200?5b1eeedb525fcd3bf13799ea",
       "price": 6085,
-      "rating": 0
+      "size": "30 ml",
+      "rating": 10
     },
     {
       "id": "5b1eeedba05ff8c59c3d5d60",
@@ -18,7 +19,8 @@
       "type": "Eau de Toilette",
       "image": "https://picsum.photos/200?5b1eeedba05ff8c59c3d5d60",
       "price": 9691,
-      "rating": 0
+      "size": "50 ml",
+      "rating": 100
     },
     {
       "id": "5b1eeedb7cb37a99826122ed",
@@ -28,7 +30,8 @@
       "type": "Eau de Toilette",
       "image": "https://picsum.photos/200?5b1eeedb7cb37a99826122ed",
       "price": 6913,
-      "rating": 2
+      "size": "50 ml",
+      "rating": 52
     },
     {
       "id": "5b1eeedb9bdda06bcdd7ea93",
@@ -38,17 +41,19 @@
       "type": "Eau de Parfum",
       "image": "https://picsum.photos/200?5b1eeedb9bdda06bcdd7ea93",
       "price": 2589,
-      "rating": 2
+      "size": "120 ml",
+      "rating": 64
     },
     {
       "id": "5b1eeedb8083c0127727bb6f",
       "name": "Ad Est",
       "slug": "ad-est",
       "brand": "Viagrand",
-      "type": "Eau de Toilette",
+      "type": "Shark repeller",
       "image": "https://picsum.photos/200?5b1eeedb8083c0127727bb6f",
       "price": 6198,
-      "rating": 5
+      "size": "100 ml",
+      "rating": 77
     },
     {
       "id": "5b1eeedb5e03d4124d90af40",
@@ -58,7 +63,8 @@
       "type": "Eau de Parfum",
       "image": "https://picsum.photos/200?5b1eeedb5e03d4124d90af40",
       "price": 1056,
-      "rating": 7
+      "size": "120 ml",
+      "rating": 27
     }
   ]
 }

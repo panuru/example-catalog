@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import SVG from 'svg-inline-react';
 import './App.scss';
 import ProductsProvider, { RequestState } from './Providers/ProductsProvider';
-import Products from './Views/Products';
-import Loader from './Views/Loader';
-import ErrorDetails from './Views/ErrorDetails';
+import Products from './Components/Products';
+import Loader from './Components/Loader';
+import ErrorDetails from './Components/ErrorDetails';
 import logo from './Images/logo.svg';
 import cart from './Images/shopping-cart.svg';
 

@@ -1,0 +1,32 @@
+@import '../../Styles/colors';
+
+.Card {
+  color: $text-dark;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Card-image {
+  width: 100%;
+
+  > img {
+    width: 100%;
+  }
+}
+
+.Card-brand,
+.Card-name {
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.4em;
+  margin: 0.3em 0;
+}
+
+.Card-type {
+  font-size: 0.8em;
+}
+
+.Card-price {
+  margin: 0.4em 0;
+}
