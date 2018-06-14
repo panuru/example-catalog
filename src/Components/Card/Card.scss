@@ -8,19 +8,49 @@
 }
 
 .Card-image {
+  overflow: hidden;
+  position: relative;
   width: 100%;
 
+  &::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.Card-image__inner {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
   > img {
+    height: 100%;
+    object-fit: cover;
     width: 100%;
   }
+
 }
 
 .Card-brand,
 .Card-name {
   font-size: 1.1em;
   font-weight: bold;
-  line-height: 1.4em;
-  margin: 0.3em 0;
+  line-height: 1.2em;
+}
+
+.Card-brand {
+  margin: 0.9em 0 0.2em;
+
+}
+
+.Card-name {
+  margin: 0 0 0.6em;
 }
 
 .Card-type {
@@ -28,5 +58,5 @@
 }
 
 .Card-price {
-  margin: 0.4em 0;
+  margin: 0.6em 0;
 }

@@ -8,7 +8,11 @@ export default function Card ({product}) {
 
   return (
     <a className="Card" href={`#${slug}`}>
-      <div className="Card-image"><img src={image} alt={name} /></div>
+      <div className="Card-image">
+        <div className="Card-image__inner">
+          <img src={image} alt={name} />
+        </div>
+      </div>
       <div className="Card-brand">{brand}</div>
       <div className="Card-name">{name}</div>
       <div className="Card-type">{type}</div>
