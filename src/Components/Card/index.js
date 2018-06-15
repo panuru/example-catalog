@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import classNames from 'classnames';
 import './Card.scss';
 
@@ -7,7 +8,7 @@ export default function Card ({product}) {
   const stars = Math.round(rating / 10) / 2;
 
   return (
-    <a className="Card" href={`#${slug}`}>
+    <Link className="Card" to={`/product/${slug}`}>
       <div className="Card-image">
         <div className="Card-image__inner">
           <img src={image} alt={name} />
@@ -21,7 +22,7 @@ export default function Card ({product}) {
         'Card-rating',
         `Card-rating--${stars}`
       )}></div>
-    </a>
+    </Link>
   );
 }
 

@@ -67,6 +67,9 @@ const server = jsonServer.create();
 const router = jsonServer.router('data/db.json');
 const middlewares = jsonServer.defaults();
 
+// Get posts by slug
+router.db._.id = "slug";
+
 // Simulate network latency
 server.use('/*', (req, res, next) => { setTimeout(next, API_LATENCY); });
 

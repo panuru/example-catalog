@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import SVG from 'svg-inline-react';
 import './App.scss';
 import ProductsPage from './Pages/Products';
+import ProductDetailsPage from './Pages/ProductDetails';
 import NotFoundPage from './Pages/NotFound';
 import logo from './Images/logo.svg';
 import cart from './Images/shopping-cart.svg';
@@ -22,6 +23,7 @@ class App extends Component {
           <main role="main" className="App-main">
             <Switch>
               <Route exact path="/" component={ProductsPage}/>
+              <Route path="/product/:slug" component={ProductDetailsPage}/>
               <Route path="/products/page/:page" component={ProductsPage}/>
               <Route component={NotFoundPage} />
             </Switch>

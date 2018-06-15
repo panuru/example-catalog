@@ -1,55 +1,26 @@
-import { Component } from 'react';
 import axios from 'axios';
+import BaseProvider from './BaseProvider';
+import { apiUrl } from '../Utils/Urls';
 
-export const RequestState = {
-  Pending: 'Pending',
-  Success: 'Success',
-  Error: 'Error'
-};
-
-const apiUrl = (path) => `${process.env.REACT_APP_API_URL}/${path}`;
 const PER_PAGE = 12;
 
-class ProductsProvider extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      requestState: RequestState.Pending,
-      data: null,
-      error: null
-    };
-  }
-  componentDidMount() {
-    this.fetch(this.props.page);
-  }
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.page !== this.props.page) {
-      this.fetch(this.props.page);
-    }
-  }
-  render () {
-    return this.props.children(this.state.requestState, this.state.data, this.state.error)
-  }
-  fetch (page) {
-    this.setState({
-      requestState: RequestState.Pending,
-      data: null,
-      error: null
-    });
+class ProductsProvider extends BaseProvider {
+  fetch () {
+    const {page} = this.props;
+
     axios.get(apiUrl(`products/?_page=${page}&_limit=${PER_PAGE}`))
       .then(({data, headers}) => {
         const total = headers['x-total-count'];
-        this.setState({
-          data: {
-            products: data,
-            total,
-            page,
-            totalPages: Math.ceil(total / PER_PAGE)
-          },
-          requestState: RequestState.Success
-        })
+        this.setData({
+          products: data,
+          total,
+          page,
+          totalPages: Math.ceil(total / PER_PAGE)
+        });
       })
-      .catch((error) => { this.setState({ error, requestState: RequestState.Error }) });
+      .catch((error) => {
+        this.setError(error);
+      });
   }
 }
 

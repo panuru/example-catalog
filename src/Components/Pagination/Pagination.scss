@@ -2,7 +2,7 @@
 @import '../../Styles/gutters';
 
 /* stylelint-disable max-nesting-depth */
-.Pagination {
+nav {
   @include gutters();
   margin-top: 1.5em;
   text-align: center;

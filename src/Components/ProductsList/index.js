@@ -1,9 +1,10 @@
 import React from 'react';
 import Card from '../Card';
 import Pagination from '../Pagination';
+import Loader from '../Loader';
 import './Products.scss';
 
-export default function ProductsList ({ products, total, page, totalPages }) {
+export default function ProductsList ({ isLoading, products, total, page, totalPages }) {
   const pagination = (
     <Pagination
       currentPage={page}
@@ -22,6 +23,7 @@ export default function ProductsList ({ products, total, page, totalPages }) {
           </li>
         ))}
       </ul>
+      {isLoading ? <div className="Products-overlay"><Loader></Loader></div> : ''}
       {pagination}
     </div>
   );
