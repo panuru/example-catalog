@@ -3,8 +3,13 @@ import SVG from 'svg-inline-react';
 import './ErrorDetails.scss';
 import warning from '../../Images/warning.svg';
 
-export default function ErrorDetails ({ error }) {
-  const status = error && error.response && error.response.status;
+export default function ErrorDetails ({ error = {} }) {
+  let status;
+  if (error.status) {
+    status = error.status;
+  } else if (error.response) {
+    status = error.response.status;
+  }
 
   return (
     <div className="ErrorDetails">
