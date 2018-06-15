@@ -20,7 +20,22 @@ class ProductsProvider extends Component {
     };
   }
   componentDidMount() {
-    const {page} = this.props;
+    this.fetch(this.props.page);
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.page !== this.props.page) {
+      this.fetch(this.props.page);
+    }
+  }
+  render () {
+    return this.props.children(this.state.requestState, this.state.data, this.state.error)
+  }
+  fetch (page) {
+    this.setState({
+      requestState: RequestState.Pending,
+      data: null,
+      error: null
+    });
     axios.get(apiUrl(`products/?_page=${page}&_limit=${PER_PAGE}`))
       .then(({data, headers}) => {
         const total = headers['x-total-count'];
@@ -35,9 +50,6 @@ class ProductsProvider extends Component {
         })
       })
       .catch((error) => { this.setState({ error, requestState: RequestState.Error }) });
-  }
-  render () {
-    return this.props.children(this.state.requestState, this.state.data, this.state.error)
   }
 }
 

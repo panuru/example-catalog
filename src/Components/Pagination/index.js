@@ -6,11 +6,12 @@ import './Pagination.scss';
 class Pagination extends Component {
   render () {
     const {currentPage, totalPages, linkTemplate} = this.props;
+
     return (
       <nav className="Pagination">
         <ul>
           {Array(totalPages).fill(0).map((_, i) => {
-            const page = i + 1;
+            const page = `${i + 1}`;
 
             return <li key={page}>
               <Link

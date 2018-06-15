@@ -1,4 +1,5 @@
 import React from 'react';
+import SVG from 'svg-inline-react';
 import './Loader.scss';
 import spinner from '../../Images/spinner.svg';
 import classNames from 'classnames';
@@ -6,7 +7,7 @@ import classNames from 'classnames';
 export default function Loader ({size}) {
   return (
     <div className={classNames('Loader', size && `Loader--${size}`)}>
-      <img src={spinner} alt="Loading..." />
+      <SVG src={spinner}/>
     </div>
   );
 }
